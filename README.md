@@ -17,4 +17,5 @@ This project is a frontend web application developed using React, Tailwind CSS, 
 
 This project demonstrates my proficiency in frontend development using React, Tailwind CSS, Headless UI, and Swiper JS. I believe that my skills and experience make me a suitable candidate for the frontend developer position at Geek Labs. Thank you for considering my application.
 
-
+## Live Demo
+https://incomparable-melomakarona-c464b9.netlify.app
