@@ -91,7 +91,9 @@ const Alerts = () => {
 
   const applyFilters = () => {
     if (filterOptions.risk) {
-      const newData = data.filter((item) => item.risk.includes(filterOptions.risk));
+      const newData = data.filter((item) =>
+        item.risk.includes(filterOptions.risk)
+      );
       setFilteredData(newData);
     } else {
       setFilteredData(data);
@@ -102,8 +104,6 @@ const Alerts = () => {
   const closeDialog = () => {
     setIsOpen(false);
   };
-
-  
 
   return (
     <main className="flex justify-between  w-full gap-3 h-full">
@@ -138,8 +138,14 @@ const Alerts = () => {
         </section>
       </div>
       <section className=" hidden md:flex flex-col items-center overflow-y-scroll  bg-[#181818] rounded-md w-[42%] h-full">
-        <Filters filterOptions={filterOptions} setFilterOptions={setFilterOptions} />
-        <button onClick={applyFilters} className="items-center mt-1 hover:bg-[#313131]  w-[40%] gap-2 rounded-lg  bg-[#53ACFF]  py-1.5 px-3 text-sm/6 font-semibold text-white  ">
+        <Filters
+          filterOptions={filterOptions}
+          setFilterOptions={setFilterOptions}
+        />
+        <button
+          onClick={applyFilters}
+          className="items-center mt-1 hover:bg-[#313131]  w-[40%] gap-2 rounded-lg  bg-[#53ACFF]  py-1.5 px-3 text-sm/6 font-semibold text-white  "
+        >
           Apply
         </button>
       </section>
@@ -167,10 +173,24 @@ const Alerts = () => {
                   >
                     <Close className="h-4 w-4" />
                   </button>
-                  <Filters filterOptions={filterOptions} setFilterOptions={setFilterOptions} />
-                  <button onClick={applyFilters} className="items-center mt-1 hover:bg-[#313131]  w-[40%] gap-2 rounded-lg  bg-[#53ACFF]  py-1.5 px-3 text-sm/6 font-semibold text-white">
-                    Apply
-                  </button>
+                  <Filters
+                    filterOptions={filterOptions}
+                    setFilterOptions={setFilterOptions}
+                  />
+                  <div className="w-full flex items-center justify-center gap-7">
+                    <button
+                      onClick={() => setIsOpen(false)}
+                      className="items-center mt-1 hover:bg-[#313131]  w-[40%] gap-2 rounded-lg border border-white  bg-transparent  py-1.5 px-3 text-sm/6 font-semibold text-white"
+                    >
+                      Save Filter
+                    </button>
+                    <button
+                      onClick={applyFilters}
+                      className="items-center mt-1 hover:bg-[#313131]  w-[40%] gap-2 rounded-lg  bg-[#53ACFF]  py-1.5 px-3 text-sm/6 font-semibold text-white"
+                    >
+                      Apply
+                    </button>
+                  </div>
                 </DialogPanel>
               </TransitionChild>
             </div>
