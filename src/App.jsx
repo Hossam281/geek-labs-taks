@@ -4,7 +4,7 @@ import SideBar from "./components/SideBar";
 
 const App = () => {
   return (
-    <div className=" w-full flex gap-3 text-white  font-poppins h-screen bg-[#202020]">
+    <div className=" w-full flex gap-3 text-white  font-poppins h-[100dvh] bg-[#202020]">
       <SideBar />
       <div className="container flex md:ml-[70px]  w-full mr-2  py-4 h-full">
         <Alerts />
